@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <div id="container">
+        <div id="chat-room">
+            <p id="ip-add"></p>
+        </div>
+        <div id="btn-container">
+            <input type="text" name="" id="name" placeholder="name">
+            <input type="text" name="" id="msg" placeholder="message">
+            <button onclick="sendMsg()" tabindex="-1">Send</button>
+        </div>
+    </div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
+
+    <script src="./assets/js/main.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    </script>
+
+    <script>
+        /* Add "https://api.ipify.org?format=json" statement 
+           this will communicate with the ipify servers in 
+           order to retrieve the IP address $.getJSON will 
+           load JSON-encoded data from the server using a 
+           GET HTTP request */
+
+        $.getJSON("https://api.ipify.org?format=json",
+            function (data) {
+
+                // Setting text of element P with id gfg 
+                $("#ip-add").html(data.ip);
+            })
+    </script>
+</body>
+
+</html>
