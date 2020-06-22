@@ -8,11 +8,21 @@ div#container {
     width: 500px;
     /* height: 800px; */
     height: 100vh;
-    border: 0.5px solid black;
+    /* border: 3px solid black; */
     margin: 0 auto;
     /* margin-top: 50px; */
     position: relative;
     font-family: tahoma;
+}
+
+div#ip-box {
+    height: 5vh;
+    background-color: red;
+    color: white;
+    border: solid 3px black;
+    border-bottom: none;
+    line-height: 5vh;
+    padding: 2px;
 }
 
 div#btn-container {
@@ -20,7 +30,7 @@ div#btn-container {
     height: 10vh;
     position: absolute;
     bottom: 0;
-    border: solid 2px red;
+    border: solid 3px black;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -49,9 +59,11 @@ input {
 
 div#chat-room {
     width: 500px;
-    height: 90vh;
+    height: 85vh;
     background-color: steelblue;
     overflow-y: scroll;
+    border: 3px solid black;
+    border-bottom: none;
 }
 
 div#chat-room::-webkit-scrollbar {
